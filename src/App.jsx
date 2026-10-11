@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import TechStack from './components/TechStack';
+import NeatLogs from './components/NeatLogs';
 import Team from './components/Team';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <HowItWorks />
         <Features />
         <TechStack />
+        <NeatLogs />
         <Team />
       </main>
     </>

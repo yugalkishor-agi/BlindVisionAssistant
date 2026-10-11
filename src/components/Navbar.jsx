@@ -7,6 +7,7 @@ export default function Navbar() {
     { label: 'how it works', href: '#how-it-works' },
     { label: 'features', href: '#features' },
     { label: 'tech stack', href: '#tech-stack' },
+    { label: 'neatlogs', href: '#neatlogs' },
     { label: 'team', href: '#team' },
   ];
 
