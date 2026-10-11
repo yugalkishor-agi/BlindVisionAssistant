@@ -43,7 +43,7 @@ export default function Hero() {
     <section className={styles.hero}>
       {/* Left column */}
       <div className={styles.left}>
-        <p className={styles.tag}>NeatLogic Hackathon · Team VedX</p>
+        <p className={styles.tag}>neatlogs Hackathon · Team VedX</p>
         <h1 className={styles.headline}>
           AI that sees<br />
           for those who{' '}

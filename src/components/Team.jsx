@@ -56,7 +56,7 @@ export default function Team() {
       <div className={styles.teamHeader}>
         <p className={styles.label}>THE PEOPLE BEHIND IT</p>
         <h2 className={styles.title}>Team VedX</h2>
-        <p className={styles.sub}>NeatLogic Hackathon — two developers, one real-world mission.</p>
+        <p className={styles.sub}>neatlogs Hackathon — two developers, one real-world mission.</p>
       </div>
 
       <div className={styles.teamGrid}>

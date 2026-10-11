@@ -34,7 +34,7 @@ export default function Sponsors() {
       <div className={styles.labelRow}>
         <p className={styles.label}>HACKATHON PARTNERS</p>
         <p className={styles.sublabel}>
-          NeatLogic Hackathon — built using all required partner tools
+          neatlogs Hackathon — built using all required partner tools
         </p>
       </div>
 
@@ -63,7 +63,7 @@ export default function Sponsors() {
         <div className={styles.footerLeft}>
           <span className={styles.footerBrand}>◈ VedX</span>
           <span className={styles.footerDivider} />
-          <span className={styles.footerHack}>NeatLogic Hackathon 2026</span>
+          <span className={styles.footerHack}>neatlogs Hackathon 2026</span>
         </div>
         <div className={styles.footerRight}>
           <span className={styles.footerCredit}>

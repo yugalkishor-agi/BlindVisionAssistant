@@ -38,4 +38,4 @@ Or add `vite-plugin-gh-pages` for automated deploys.
 
 ---
 
-Made by **Yugal Kishor** & **Harshvardhan Singh** — Team VedX | NeatLogic Hackathon
+Made by **Yugal Kishor** & **Harshvardhan Singh** — Team VedX | neatlogs Hackathon
