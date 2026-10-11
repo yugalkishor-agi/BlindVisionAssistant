@@ -1,0 +1,174 @@
+.section {
+  background: var(--black);
+  color: var(--cream);
+}
+
+/* Label row */
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 48px 32px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+}
+
+.sublabel {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Partner grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1.5px solid rgba(255,255,255,0.08);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 36px 32px;
+  border-right: 1.5px solid rgba(255,255,255,0.08);
+  text-decoration: none;
+  color: var(--cream);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.card:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.card:hover .visitLink {
+  color: var(--orange);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.partnerName {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.roleBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
+  padding: 3px 9px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.partnerDesc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.visitLink {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.35);
+  transition: color 0.2s;
+  margin-top: auto;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footerLeft,
+.footerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footerBrand {
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.footerHack {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.footerDivider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,0.15);
+  display: inline-block;
+}
+
+.footerCredit {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.footerCredit strong {
+  color: var(--cream);
+  font-weight: 700;
+}
+
+.footerLink {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--orange);
+  transition: opacity 0.2s;
+}
+
+.footerLink:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .card:nth-child(2n) { border-right: none; }
+  .card { border-bottom: 1.5px solid rgba(255,255,255,0.08); }
+  .labelRow, .footer { padding: 28px 24px; }
+  .card { padding: 28px 24px; }
+}
+
+@media (max-width: 500px) {
+  .grid { grid-template-columns: 1fr; }
+  .card { border-right: none; }
+  .footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+}

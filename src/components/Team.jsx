@@ -118,13 +118,7 @@ export default function Team() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className={styles.footer}>
-        <p className={styles.footerBrand}>◈ VedX · NeatLogic Hackathon 2026</p>
-        <p className={styles.footerCredit}>
-          Made with ❤️ by Yugal Kishor &amp; Harshvardhan Singh
-        </p>
-      </div>
+      {/* Footer moved to Sponsors section */}
     </section>
   );
 }
