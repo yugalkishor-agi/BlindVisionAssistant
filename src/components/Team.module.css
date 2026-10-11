@@ -1,0 +1,290 @@
+.section {
+  border-bottom: 1.5px solid var(--border);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+/* Team Header */
+.teamHeader {
+  padding: 80px 48px 48px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+.sub {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Team Grid */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1.5px solid var(--border);
+}
+
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  border-right: 1.5px solid var(--border);
+  transition: background 0.15s;
+}
+
+.memberCard:last-child {
+  border-right: none;
+}
+
+.memberCard:hover {
+  background: rgba(0, 0, 0, 0.015);
+}
+
+.memberCardAccent {
+  background: rgba(232, 68, 10, 0.03);
+}
+
+.memberCardAccent:hover {
+  background: rgba(232, 68, 10, 0.06);
+}
+
+/* Icon banner */
+.memberIconWrap {
+  padding: 32px 40px 28px;
+  border-bottom: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--black);
+}
+
+.memberIconAccent {
+  color: var(--orange);
+  background: rgba(232, 68, 10, 0.06);
+}
+
+/* Member info */
+.memberInfo {
+  padding: 28px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.memberMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.memberRoleBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--black);
+  color: var(--cream);
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.badgeAccent {
+  background: var(--orange);
+}
+
+.memberNote {
+  font-size: 0.85rem;
+  color: var(--orange);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.contribList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contribList li {
+  font-size: 0.88rem;
+  color: #444;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.contribList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+/* Download */
+.download {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.downloadLeft {
+  padding: 80px 48px;
+  border-right: 1.5px solid var(--border);
+}
+
+.downloadTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.0;
+  margin-bottom: 20px;
+}
+
+.downloadSub {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.65;
+  max-width: 500px;
+  margin-bottom: 36px;
+}
+
+.downloadActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.apkBtn {
+  background: var(--orange);
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 16px 32px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.apkBtn:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+}
+
+.ghBtn {
+  background: transparent;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 28px;
+  border: 2px solid var(--black);
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ghBtn:hover {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.downloadRight {
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.reqBox {
+  width: 100%;
+}
+
+.reqTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.reqList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reqList li {
+  font-size: 0.9rem;
+  color: #444;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.reqList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-weight: 900;
+}
+
+/* Footer */
+.footer {
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1.5px solid var(--border);
+}
+
+.footerBrand {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.footerCredit {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .teamGrid { grid-template-columns: 1fr; }
+  .memberCard { border-right: none; border-bottom: 1.5px solid var(--border); }
+  .memberCard:last-child { border-bottom: none; }
+  .memberIconWrap { padding: 24px; }
+  .memberInfo { padding: 24px; }
+  .download { grid-template-columns: 1fr; }
+  .downloadLeft { border-right: none; border-bottom: 1.5px solid var(--border); padding: 48px 24px; }
+  .downloadRight { padding: 32px 24px; }
+  .teamHeader { padding: 48px 24px 32px; }
+  .footer { padding: 24px; flex-direction: column; gap: 8px; align-items: flex-start; }
+}

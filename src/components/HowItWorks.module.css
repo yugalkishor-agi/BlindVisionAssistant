@@ -1,0 +1,184 @@
+.section {
+  border-bottom: 1.5px solid var(--border);
+}
+
+.header {
+  padding: 80px 48px 48px;
+  border-bottom: 1.5px solid var(--border);
+  max-width: 720px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.step {
+  padding: 40px 32px;
+  border-right: 1.5px solid var(--border);
+  position: relative;
+}
+
+.step:last-child {
+  border-right: none;
+}
+
+.stepNum {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stepIcon {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.stepDesc {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Checklist */
+.checklist {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 280px;
+}
+
+.checklistLabel {
+  padding: 40px 32px;
+  border-right: 1.5px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checklistTag {
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  font-family: 'Courier New', monospace;
+  line-height: 1.3;
+  white-space: pre-line;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.checklistItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.checklistRow {
+  display: grid;
+  grid-template-columns: 24px 1fr 160px 16px 120px;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 32px;
+  border-bottom: 1.5px solid var(--border);
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.checklistRow:last-child {
+  border-bottom: none;
+}
+
+.checklistRow:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--black);
+  border-radius: 2px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.checkTask {
+  font-weight: 600;
+}
+
+.checkTime {
+  font-size: 0.82rem;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
+.dot {
+  color: var(--gray);
+}
+
+.checkCat {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+@media (max-width: 1100px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .step:nth-child(2) { border-right: none; }
+  .step { border-bottom: 1.5px solid var(--border); }
+}
+
+@media (max-width: 768px) {
+  .header { padding: 48px 24px 32px; }
+  .steps { grid-template-columns: 1fr; }
+  .step { border-right: none; padding: 24px; }
+  .checklist { grid-template-columns: 1fr; }
+  .checklistLabel { border-right: none; border-bottom: 1.5px solid var(--border); padding: 24px; }
+  .checklistRow { grid-template-columns: 24px 1fr; gap: 8px; padding: 16px 24px; }
+  .checkTime, .dot, .checkCat { display: none; }
+}

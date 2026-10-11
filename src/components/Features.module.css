@@ -1,0 +1,110 @@
+.section {
+  border-bottom: 1.5px solid var(--border);
+}
+
+.sectionHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 48px 60px;
+  border-bottom: 1.5px solid var(--border);
+  align-items: end;
+}
+
+.left {}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.65;
+  max-width: 440px;
+  align-self: end;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: none;
+}
+
+.card {
+  padding: 36px 32px;
+  border-right: 1.5px solid var(--border);
+  border-bottom: 1.5px solid var(--border);
+  transition: background 0.2s;
+}
+
+.card:nth-child(4n) {
+  border-right: none;
+}
+
+.card:hover {
+  background: rgba(232, 68, 10, 0.04);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+}
+
+.cardTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--black);
+  color: var(--cream);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 0.83rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .card:nth-child(4n) { border-right: 1.5px solid var(--border); }
+  .card:nth-child(2n) { border-right: none; }
+}
+
+@media (max-width: 768px) {
+  .sectionHeader { grid-template-columns: 1fr; padding: 48px 24px 32px; }
+  .grid { grid-template-columns: 1fr; }
+  .card { border-right: none; padding: 24px; }
+  .card:nth-child(2n) { border-right: none; }
+}
