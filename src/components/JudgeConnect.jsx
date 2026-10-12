@@ -1,6 +1,7 @@
 import styles from './JudgeConnect.module.css';
 
 const APK_URL  = 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant/releases/tag/release';
+const NOTEBOOK_URL = 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant/releases/download/release/notebook.ipynb';
 
 /* ── SVG Icons ─────────────────────────────────────────────── */
 const IconKey = () => (
@@ -198,6 +199,26 @@ export default function JudgeConnect() {
         >
           <IconDownload />
           Download APK →
+        </a>
+      </div>
+
+      <div className={styles.apkBanner}>
+        <div className={styles.apkLeft}>
+          <p className={styles.apkLabel}>REMOTE MODEL SETUP</p>
+          <p className={styles.apkTitle}>Download the Kaggle notebook</p>
+          <p className={styles.apkSub}>
+            Use this notebook to start the remote Gemma server with your Kaggle
+            <code> HF_TOKEN </code> secret and Cloudflare tunnel.
+          </p>
+        </div>
+        <a
+          href={NOTEBOOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.apkBtn}
+          download
+        >
+          Download Notebook →
         </a>
       </div>
     </section>
