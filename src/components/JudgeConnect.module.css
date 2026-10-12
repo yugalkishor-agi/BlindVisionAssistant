@@ -1,0 +1,306 @@
+.section {
+  border-bottom: 1.5px solid var(--border);
+  background: var(--cream);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.header {
+  padding: 80px 48px 60px;
+  border-bottom: 1.5px solid var(--border);
+  max-width: 720px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+/* ── Steps ──────────────────────────────────────────────────── */
+.steps {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  border-bottom: 1.5px solid var(--border);
+  transition: background 0.15s;
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+.step:hover {
+  background: rgba(232, 68, 10, 0.025);
+}
+
+/* Left column: number badge + icon */
+.stepLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0 32px;
+  border-right: 1.5px solid var(--border);
+  gap: 12px;
+  position: relative;
+}
+
+.numBadge {
+  font-size: 0.72rem;
+  font-weight: 900;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  color: var(--cream);
+  background: var(--black);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrap {
+  color: var(--orange);
+}
+
+/* Right column: content */
+.stepBody {
+  padding: 32px 48px;
+}
+
+.stepTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+/* Bullet list */
+.pointList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pointList:last-child {
+  margin-bottom: 0;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  color: var(--orange);
+  margin-top: 3px;
+}
+
+/* Warning box */
+.warnBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(232, 68, 10, 0.06);
+  border: 1.5px solid rgba(232, 68, 10, 0.25);
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-top: 18px;
+}
+
+.warnIcon {
+  flex-shrink: 0;
+  color: var(--orange);
+  margin-top: 1px;
+}
+
+.warnBox p {
+  font-size: 0.84rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Callout ─────────────────────────────────────────────────── */
+.callout {
+  padding: 48px;
+  background: var(--black);
+}
+
+.calloutInner {
+  max-width: 680px;
+}
+
+.calloutLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.calloutText {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--orange);
+  border-bottom: 1.5px solid var(--orange);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.contactLink:hover {
+  opacity: 0.75;
+}
+
+/* ── APK download banner ─────────────────────────────────────── */
+.apkBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px;
+  border-top: 1.5px solid var(--border);
+  background: var(--cream);
+}
+
+.apkLeft {
+  max-width: 560px;
+}
+
+.apkLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.apkTitle {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.apkSub {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.apkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 16px 32px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.apkBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .header {
+    padding: 48px 24px 36px;
+  }
+
+  .step {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .stepBody {
+    padding: 24px 24px;
+  }
+
+  .callout {
+    padding: 36px 24px;
+  }
+
+  .apkBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 24px;
+    gap: 24px;
+  }
+
+  .apkBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .step {
+    grid-template-columns: 1fr;
+  }
+
+  .stepLeft {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 24px 0;
+    border-right: none;
+    border-bottom: none;
+    gap: 10px;
+  }
+
+  .stepBody {
+    padding: 16px 24px 24px;
+  }
+}

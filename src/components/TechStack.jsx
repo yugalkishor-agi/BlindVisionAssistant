@@ -14,10 +14,10 @@ const stack = [
 ];
 
 const highlights = [
-  { value: '5s',    label: 'Average response time' },
-  { value: '0',     label: 'Cloud API calls' },
-  { value: '4-bit', label: 'Model quantisation' },
-  { value: '<1s',   label: 'ML Kit OCR speed' },
+  { value: 'Local', label: 'Primary inference mode' },
+  { value: '4-bit', label: 'On-device model format' },
+  { value: 'OCR',   label: 'Text-reading tool' },
+  { value: 'Remote',label: 'Optional demo backend' },
 ];
 
 // Arrow SVG
@@ -63,14 +63,16 @@ export default function TechStack() {
         <div className={styles.archBlock}>
           <span className={styles.archArrow}><ArrowRight /></span>
           <p className={styles.archText}>
-            <strong>User question + camera photo</strong>
-            {' '}passes through ML Kit OCR, then to Gemma 3n,
-            then streams directly to text-to-speech — all without leaving the device.
+            <strong>VedX is an AI agent, not a fixed pipeline.</strong>
+            {' '}The intent router reads your question and decides at runtime: open the camera,
+            run OCR, both, or neither. Only the tools the question actually needs are invoked —
+            keeping unnecessary camera work low. Local mode keeps processing on the
+            device; remote mode is an explicit user setting for testing and demos.
           </p>
         </div>
         <div className={styles.archPipeline}>
-          {['Voice Input', 'Camera Capture', 'ML Kit OCR', 'Gemma 3n', 'TTS Output'].map((s, i, arr) => (
-            <div key={i} className={styles.pipeStep}>
+          {['Voice Input', 'Intent Router', 'Camera + OCR?', 'Gemma 3n', 'TTS Output'].map((s, i, arr) => (
+            <div key={i} className={`${styles.pipeStep} ${s === 'Intent Router' ? styles.pipeStepAgent : ''}`}>
               <div className={styles.pipeBox}>{s}</div>
               {i < arr.length - 1 && <span className={styles.pipeArrow}><ArrowRight /></span>}
             </div>

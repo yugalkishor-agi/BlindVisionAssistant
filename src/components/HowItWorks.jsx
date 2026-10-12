@@ -38,31 +38,32 @@ const steps = [
     num: '01',
     Icon: IconMic,
     title: 'Press & Ask',
-    desc: 'The user presses a button on the 8BitDo controller (or taps the screen) and speaks their question.',
+    desc: 'The user presses a button on the 8BitDo controller (or taps the screen) and speaks their question. Speech-to-text captures it as plain text.',
   },
   {
     num: '02',
-    Icon: IconCamera,
-    title: 'Instant Capture',
-    desc: 'The app silently opens the camera, snaps a photo, and closes it — all in under a second. No preview needed.',
+    Icon: IconBrain,
+    title: 'Agent Decides — No Fixed Pipeline',
+    desc: 'The intent router analyses the question and picks a path: (A) needs a photo → capture + OCR + Gemma vision, (B) needs text from camera → capture + ML Kit OCR only, (C) pure knowledge question → straight to Gemma, no camera opened at all.',
+    isDecision: true,
   },
   {
     num: '03',
-    Icon: IconScan,
-    title: 'On-Device OCR',
-    desc: 'Google ML Kit reads any text in the photo directly on the device. No cloud call, no latency, no data leak.',
+    Icon: IconCamera,
+    title: 'Camera & OCR — Only When Needed',
+    desc: 'If the agent decided vision is required, the app silently captures a photo in under a second. If the question involves printed text (labels, signs, bills), ML Kit OCR extracts it on-device before passing it to the model.',
   },
   {
     num: '04',
-    Icon: IconBrain,
-    title: 'Gemma 3n Thinks',
-    desc: 'The image, recognised text, and question go to Gemma 3n running locally. It starts generating immediately.',
+    Icon: IconScan,
+    title: 'Gemma 3n Generates the Answer',
+    desc: 'The question — enriched with photo and/or OCR text only when the agent requested them — goes to Gemma 3n. Local inference streams tokens; remote mode returns the hosted response after inference completes.',
   },
   {
     num: '05',
     Icon: IconVolume,
     title: 'Answer Spoken Live',
-    desc: 'Text-to-speech starts reading the first tokens before the full answer is ready. Loading music fills any gap.',
+    desc: 'For local streaming responses, text-to-speech can start before the full answer is ready. Remote responses are spoken after the server returns them. Audio cues indicate progress.',
   },
 ];
 
@@ -70,16 +71,19 @@ export default function HowItWorks() {
   return (
     <section className={styles.section} id="how-it-works">
       <div className={styles.header}>
-        <p className={styles.label}>REAL FLOW · RIGHT NOW</p>
+        <p className={styles.label}>REAL FLOW · AI AGENT</p>
         <h2 className={styles.title}>How it works</h2>
         <p className={styles.subtitle}>
-          Five steps, entirely on your phone, with no internet required at any point.
+          VedX is not a fixed pipeline — it's an agent. It reads your question,
+          decides what tools it needs, and acts. No camera is opened unless necessary.
+          OCR and vision run locally in on-device mode, or through the configured remote
+          backend when remote mode is enabled.
         </p>
       </div>
 
       <div className={styles.steps}>
-        {steps.map(({ num, Icon, title, desc }, i) => (
-          <div key={i} className={styles.step}>
+        {steps.map(({ num, Icon, title, desc, isDecision }, i) => (
+          <div key={i} className={`${styles.step} ${isDecision ? styles.stepDecision : ''}`}>
             <div className={styles.stepNum}>{num}</div>
             <div className={styles.stepContent}>
               <div className={styles.stepIcon}><Icon /></div>
@@ -93,16 +97,16 @@ export default function HowItWorks() {
       {/* Checklist row */}
       <div className={styles.checklist}>
         <div className={styles.checklistLabel}>
-          <span className={styles.checklistTag}>WHAT IT{'\n'}CAN DO</span>
+          <span className={styles.checklistTag}>WHAT THE{'\n'}AGENT CAN DO</span>
           <span className={styles.arrow}>→</span>
         </div>
         <div className={styles.checklistItems}>
           {[
-            ['Navigate streets',    '~5s response',  'Navigation'],
-            ['Read printed text',   'Under 1s (OCR)', 'Accessibility'],
-            ['Identify products',   'Gemma 3n',       'Shopping'],
-            ['Answer any question', 'Fully offline',  'General AI'],
-            ['Describe scenes',     '4-bit quantised','Vision'],
+            ['Understand surroundings',  'Snapshot + model', 'Vision + Agent'],
+            ['Read printed text',         'ML Kit OCR',      'OCR + answer'],
+            ['Identify products',         'Gemma 3n',       'Vision + Agent'],
+            ['Answer knowledge questions','No camera used', 'Text only'],
+            ['Describe scenes',           'Image required',  'Vision + Agent'],
           ].map(([task, time, cat], i) => (
             <div key={i} className={styles.checklistRow}>
               <span className={styles.checkbox} />

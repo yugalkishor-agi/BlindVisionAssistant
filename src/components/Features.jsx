@@ -51,14 +51,21 @@ const icons = {
       <line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
     </svg>
   ),
+  agent: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+    </svg>
+  ),
 };
 
 const features = [
-  { iconKey: 'wifi',          title: 'Fully Offline',          tag: 'Privacy',       desc: 'No internet needed. The app works everywhere — underground, in rural areas, at hospitals. Your data never leaves your phone.' },
-  { iconKey: 'lock',          title: 'Zero Data Leakage',      tag: 'Security',      desc: 'Photos are processed entirely on-device. No cloud servers, no foreign data-protection rules, no privacy risk.' },
+  { iconKey: 'agent',         title: 'AI Agent — Not Just an Assistant', tag: 'Intelligence',  desc: 'VedX is no longer a fixed pipeline. The built-in intent router reads your question and decides on its own: does this need the camera? Does it need OCR? Or is a plain text answer enough? You ask — the agent figures out the rest.' },
+  { iconKey: 'wifi',          title: 'Offline-First',          tag: 'Privacy',       desc: 'On a compatible device, Gemma and OCR can run locally without an inference API. Remote mode is available separately for emulator and demo testing.' },
+  { iconKey: 'lock',          title: 'Local Privacy Mode',     tag: 'Security',      desc: 'In on-device mode, captured images stay on the phone. If remote mode is enabled, prompts and images are sent to the configured server.' },
   { iconKey: 'gamepad',       title: 'Physical Controller',    tag: 'UX',            desc: 'The 8BitDo Micro controller lets users interact without touching the screen — ideal when the phone is in a chest harness.' },
-  { iconKey: 'zap',           title: '5× Faster Inference',    tag: 'Performance',   desc: 'By closing the camera before inference, response time dropped from 50 seconds to 5 seconds on the same hardware.' },
-  { iconKey: 'type',          title: 'Accurate OCR',           tag: 'Accuracy',      desc: 'Google ML Kit reads text on-device in under 1 second — far more reliable than asking Gemma alone to read text.' },
+  { iconKey: 'zap',           title: 'Snapshot Camera Flow',   tag: 'Performance',   desc: 'The app opens the camera only when a request needs an image, captures a snapshot, and disposes the camera before inference.' },
+  { iconKey: 'type',          title: 'On-Device OCR',           tag: 'Accuracy',      desc: 'Google ML Kit is used for text-reading requests and its result is supplied as grounded context to the answer stage.' },
   { iconKey: 'accessibility', title: 'TalkBack + VoiceOver',   tag: 'Accessibility', desc: 'Full screen-reader support on Android and iOS. Large, labelled buttons. Loading music so users know the AI is thinking.' },
   { iconKey: 'music',         title: 'Rich Audio Feedback',    tag: 'Audio',         desc: 'Dictation chimes, send whoosh, loading music, and voice confirmations — every action has a sound so nothing is silent.' },
   { iconKey: 'layout',        title: 'Single Screen Design',   tag: 'Design',        desc: 'Everything on one screen. No navigation back and forth. Asking a new question is always one button press away.' },
@@ -73,8 +80,9 @@ export default function Features() {
           <h2 className={styles.title}>Features built<br />for real use</h2>
         </div>
         <p className={styles.desc}>
-          Every decision was validated by a completely blind user in real daily scenarios.
-          No feature made the cut unless it actually helped.
+          VedX evolved from a simple assistant into an AI agent — one that reasons about
+          your question before acting. The local and remote paths are shown separately
+          so the demo does not overpromise what runs on every device.
         </p>
       </div>
 

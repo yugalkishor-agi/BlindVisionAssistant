@@ -28,7 +28,7 @@ const team = [
       '8BitDo controller & keyboard event handling',
       'ML Kit OCR pipeline',
       'TalkBack & VoiceOver compatibility',
-      '5× inference speed optimisation',
+      'Snapshot-based camera performance work',
     ],
     accent: false,
   },
@@ -92,7 +92,7 @@ export default function Team() {
           </h2>
           <p className={styles.downloadSub}>
             Download the APK and try it on any Android phone powerful enough to run Gemma 3n.
-            The model downloads on first launch from HuggingFace — no account needed.
+            Local mode downloads the model on first launch from Hugging Face after the required access flow. Remote mode can skip that download.
           </p>
           <div className={styles.downloadActions}>
             <a href={APK} target="_blank" rel="noopener noreferrer" className={styles.apkBtn}>
@@ -108,9 +108,9 @@ export default function Team() {
           <div className={styles.reqBox}>
             <p className={styles.reqTitle}>Requirements</p>
             <ul className={styles.reqList}>
-              <li>Android phone with 6 GB+ RAM</li>
-              <li>~4 GB free storage for the model</li>
-              <li>WiFi for first-time model download</li>
+              <li>Compatible Android phone for local inference</li>
+              <li>Free storage for the downloaded model</li>
+              <li>Network for first-time setup or remote mode</li>
               <li>Optional: 8BitDo Micro controller</li>
               <li>Optional: chest harness for hands-free use</li>
             </ul>

@@ -162,6 +162,13 @@
   color: var(--cream);
 }
 
+/* Highlight the agent/router node */
+.pipeStepAgent .pipeBox {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
 .pipeArrow {
   display: flex;
   align-items: center;

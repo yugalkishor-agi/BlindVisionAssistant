@@ -83,6 +83,27 @@
   line-height: 1.6;
 }
 
+/* Agent decision step — visually distinct */
+.stepDecision {
+  background: var(--black);
+}
+
+.stepDecision .stepNum {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.stepDecision .stepIcon {
+  color: var(--orange);
+}
+
+.stepDecision .stepTitle {
+  color: var(--cream);
+}
+
+.stepDecision .stepDesc {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* Checklist */
 .checklist {
   display: grid;

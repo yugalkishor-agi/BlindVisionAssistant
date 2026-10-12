@@ -56,10 +56,33 @@
   padding: 8px 18px;
   border-radius: 4px;
   transition: background 0.2s;
+  white-space: nowrap;
 }
 
 .ctaSmall:hover {
   background: #333;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.ctaGhost {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--black);
+  opacity: 0.65;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.ctaGhost:hover {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -67,6 +90,9 @@
     padding: 0 20px;
   }
   .links {
+    display: none;
+  }
+  .ctaGhost {
     display: none;
   }
 }

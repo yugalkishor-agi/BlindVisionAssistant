@@ -2,28 +2,22 @@ import styles from './Sponsors.module.css';
 
 const partners = [
   {
-    name: 'NeatLogs',
-    url: 'https://neatlogs.com',
-    desc: 'Telemetry & trace pipeline',
-    role: 'Observability Partner',
+    name: 'Website',
+    url: 'https://blindvisionassistant.vercel.app',
+    desc: 'Project showcase and judge guide',
+    role: 'Open',
   },
   {
-    name: 'Entire.io',
-    url: 'https://entire.io',
-    desc: 'Code graph & agent memory',
-    role: 'Code Intelligence Partner',
+    name: 'GitHub Release',
+    url: 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant/releases/tag/release',
+    desc: 'APK, source package, and remote-model notebook',
+    role: 'Download',
   },
   {
-    name: 'cfo.ai',
-    url: 'https://cfo.ai',
-    desc: 'Financial modelling & runway',
-    role: 'Business Partner',
-  },
-  {
-    name: 'Orchestrator.inc',
-    url: 'https://orchestrator.inc',
-    desc: 'Agent orchestration platform',
-    role: 'Infrastructure Partner',
+    name: 'Source Code',
+    url: 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant',
+    desc: 'Flutter application repository',
+    role: 'Inspect',
   },
 ];
 
@@ -32,9 +26,9 @@ export default function Sponsors() {
     <section className={styles.section}>
       {/* Label row */}
       <div className={styles.labelRow}>
-        <p className={styles.label}>HACKATHON PARTNERS</p>
+        <p className={styles.label}>PROJECT LINKS</p>
         <p className={styles.sublabel}>
-          neatlogs Hackathon — built using all required partner tools
+          The links judges need to inspect and try the actual project
         </p>
       </div>
 

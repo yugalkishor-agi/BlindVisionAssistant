@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 
 const REPO = 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant';
-const APK  = 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant/releases';
+const APK  = 'https://github.com/yugalkishor-agi/Blind-Vision-Assistant/releases/tag/release';
 
 // Clean SVG icons — no emoji, proper scalable art
 const IconUser = () => (
@@ -52,8 +52,9 @@ export default function Hero() {
           </span>
         </h1>
         <p className={styles.sub}>
-          An offline, on-device AI assistant for blind users — navigation,
-          shopping, and text reading with zero internet and zero data sharing.
+          An offline-first <strong>AI agent</strong> for blind users — it decides on its
+          own whether to use the camera, run OCR, or answer directly. Local Gemma is
+          the main mode, with an optional remote backend for emulator and demo testing.
         </p>
         <div className={styles.actions}>
           <a href={APK} target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
@@ -64,8 +65,9 @@ export default function Hero() {
           </a>
         </div>
         <div className={styles.badges}>
-          <span className={styles.badge}>100% Offline</span>
-          <span className={styles.badge}>No Photos Shared</span>
+          <span className={styles.badge}>AI Agent</span>
+          <span className={styles.badge}>Offline-first</span>
+          <span className={styles.badge}>Optional Remote Mode</span>
           <span className={styles.badge}>Gemma 3n</span>
           <span className={styles.badge}>Flutter</span>
         </div>
@@ -86,20 +88,20 @@ export default function Hero() {
 
         {/* Floating cards */}
         <div className={`${styles.floatCard} ${styles.cardOrange}`}>
-          <strong>Offline-first AI</strong>
+          <strong>AI Agent — not just an assistant</strong>
         </div>
         <div className={`${styles.floatCard} ${styles.cardWhite1}`}>
           <span className={styles.cardSvg}><IconEye /></span>
           <div>
-            <strong>Vision activated</strong>
-            <p>Camera opened, photo taken</p>
+            <strong>Agent decided: Vision</strong>
+            <p>Camera + OCR triggered by intent</p>
           </div>
         </div>
         <div className={`${styles.floatCard} ${styles.cardWhite2}`}>
           <span className={styles.cardSvg}><IconVolume /></span>
           <div>
             <strong>Answer spoken</strong>
-            <p>Response streaming live!</p>
+            <p>Local responses stream to speech</p>
           </div>
         </div>
       </div>
